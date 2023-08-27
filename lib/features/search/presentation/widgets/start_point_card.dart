@@ -1,0 +1,95 @@
+import 'package:fahrplanauskunft/core/constants/constants.dart';
+import 'package:fahrplanauskunft/features/search/domain/entities/start_point.dart';
+import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
+
+class StartPointItem extends StatelessWidget {
+  const StartPointItem({super.key, required this.startPoint});
+
+  final StartPoint startPoint;
+
+  Expanded _buildTextsView(bool isStop) {
+    return Expanded(
+      child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: isStop ? _buildStopTexts() : _buildSuburbText()),
+    );
+  }
+
+  Container _buildIconView(bool isStop) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: COLOR_PURPLE,
+        borderRadius: BorderRadius.all(
+          Radius.circular(16),
+        ),
+      ),
+      padding: const EdgeInsets.all(16),
+      child: Icon(
+        isStop ? Ionicons.bus_sharp : Ionicons.home_sharp,
+        color: Colors.white,
+      ),
+    );
+  }
+
+  Text _buildSubtitleText(String text) {
+    return Text(
+      text,
+      textAlign: TextAlign.left,
+      style: const TextStyle(fontWeight: FontWeight.w300, fontSize: 16),
+    );
+  }
+
+  Text _buildTitleText(String text) {
+    return Text(
+      text,
+      textAlign: TextAlign.left,
+      style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+    );
+  }
+
+  Column _buildSuburbText() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildTitleText(startPoint.name),
+        _buildSubtitleText(''),
+      ],
+    );
+  }
+
+  Column _buildStopTexts() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildTitleText(startPoint.disassembledName),
+        const SizedBox(height: 4),
+        _buildSubtitleText(startPoint.name),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    bool isStop = startPoint.type == 'stop';
+
+    onTapped() =>
+        Navigator.pushNamed(context, DETAILS_SCREEN, arguments: startPoint);
+
+    return Container(
+      margin: const EdgeInsets.only(top: 4),
+      child: InkWell(
+        onTap: onTapped,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+          child: Row(
+            children: [
+              _buildIconView(isStop),
+              _buildTextsView(isStop),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

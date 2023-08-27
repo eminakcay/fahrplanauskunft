@@ -1,0 +1,51 @@
+name: fahrplanauskunft
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  #icon
+  cupertino_icons: ^1.0.2
+  ionicons: ^0.2.2
+  
+  #service locator
+  get_it: ^7.6.0 
+
+  #dateFormat
+  intl: ^0.18.1
+
+  #path provider
+  path_provider: ^2.0.15
+
+  #http
+  http: ^1.1.0
+
+  #state management
+  provider: ^6.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+  fonts:
+    - family: Opensans
+      fonts:
+        - asset: assets/fonts/open-sans-light.ttf
+          weight: 300
+        - asset: assets/fonts/open-sans-bold.ttf
+          weight: 700
+        - asset: assets/fonts/open-sans-regular.ttf
+          weight: 600
