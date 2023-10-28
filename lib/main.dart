@@ -1,8 +1,8 @@
-import 'package:fahrplanauskunft/config/providers/start_point_provider.dart';
+import 'package:fahrplanauskunft/features/search/presentation/providers/start_point_provider.dart';
 import 'package:fahrplanauskunft/config/routes/app_routes.dart';
 import 'package:fahrplanauskunft/core/constants/constants.dart';
 import 'package:fahrplanauskunft/features/search/presentation/screens/home/home_screen.dart';
-import 'package:fahrplanauskunft/utils/app_context.dart';
+import 'package:fahrplanauskunft/core/utils/app_context.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

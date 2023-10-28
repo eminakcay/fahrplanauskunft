@@ -1,4 +1,4 @@
-import 'package:fahrplanauskunft/config/providers/start_point_provider.dart';
+import 'package:fahrplanauskunft/features/search/presentation/providers/start_point_provider.dart';
 import 'package:fahrplanauskunft/core/constants/constants.dart';
 import 'package:fahrplanauskunft/core/enums/api_error.dart';
 import 'package:fahrplanauskunft/features/search/domain/entities/start_point.dart';

@@ -1,5 +1,5 @@
 import 'package:fahrplanauskunft/features/search/domain/usecases/search_start_point_use_case.dart';
-import 'package:fahrplanauskunft/utils/app_context.dart';
+import 'package:fahrplanauskunft/core/utils/app_context.dart';
 import 'package:get_it/get_it.dart';
 
 import 'features/search/data/data_sources/remote/api_service.dart';

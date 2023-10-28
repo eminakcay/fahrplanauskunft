@@ -2,12 +2,12 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fahrplanauskunft/config/providers/start_point_provider.dart';
+import 'package:fahrplanauskunft/features/search/presentation/providers/start_point_provider.dart';
 import 'package:fahrplanauskunft/core/constants/constants.dart';
 import 'package:fahrplanauskunft/core/enums/api_error.dart';
 import 'package:fahrplanauskunft/features/search/data/models/start_point_model.dart';
 import 'package:fahrplanauskunft/features/search/domain/entities/start_point.dart';
-import 'package:fahrplanauskunft/utils/app_context.dart';
+import 'package:fahrplanauskunft/core/utils/app_context.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';

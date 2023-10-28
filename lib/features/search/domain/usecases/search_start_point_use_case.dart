@@ -1,8 +1,8 @@
-import 'package:fahrplanauskunft/config/providers/start_point_provider.dart';
+import 'package:fahrplanauskunft/features/search/presentation/providers/start_point_provider.dart';
 import 'package:fahrplanauskunft/core/usecase/usecase.dart';
 import 'package:fahrplanauskunft/features/search/data/repository/start_point_repository_impl.dart';
 import 'package:fahrplanauskunft/features/search/domain/entities/start_point.dart';
-import 'package:fahrplanauskunft/utils/app_context.dart';
+import 'package:fahrplanauskunft/core/utils/app_context.dart';
 import 'package:provider/provider.dart';
 
 class SearchStartPointUseCase implements UseCase<List<StartPoint>, String?> {
